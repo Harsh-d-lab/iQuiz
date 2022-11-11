@@ -94,7 +94,7 @@ body{
 .info_box .info-title{
     height: 4rem;
     width: 50rem;
-    border-bottom: 1px solid rgb(4, 118, 42);
+    border-bottom: 0.1rem solid rgb(4, 118, 42);
     display: flex;
     align-items: center;
     padding: 0rem 10rem;
@@ -283,7 +283,7 @@ footer button{
     border-radius: 0.5rem;
     background: #6406b2;
     border: 1px solid #007bff;
-    line-height: 10px;
+    line-height: 1rem;
     opacity: 1;
     pointer-events: none;
     transform: scale(0.95);
@@ -307,8 +307,8 @@ footer button.show{
     color: #fff;
     border-radius: 0.5rem;
     background: #6406b2;
-    border: 1px solid #007bff;
-    line-height: 10px;
+    border: 0.1rem solid #007bff;
+    line-height: 1rem;
     opacity: 1;
     pointer-events: none;
     transform: scale(0.95);
@@ -368,7 +368,7 @@ footer button.show{
     margin: 3rem 3rem;
   }
 .submit:hover{
-    border: 2px solid rgba(0, 0, 0, 0.923);
+    border: 0.2rem solid rgba(0, 0, 0, 0.923);
     background-color: rgb(7, 136, 7);
     cursor: pointer;
 }
