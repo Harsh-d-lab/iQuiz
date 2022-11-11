@@ -189,7 +189,7 @@ body{
     user-select: none;
 }
 section{
-    padding: 25px 30px 20px 30px;
+    padding: 0.7rem 2rem 2rem 1rem;
     background: rgb(176, 239, 232);
 }
 section .que_text{
@@ -282,7 +282,7 @@ footer button{
     color: #fff;
     border-radius: 0.5rem;
     background: #6406b2;
-    border: 1px solid #007bff;
+    border: 0.1rem solid #007bff;
     line-height: 1rem;
     opacity: 1;
     pointer-events: none;
