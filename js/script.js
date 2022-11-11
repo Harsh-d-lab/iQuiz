@@ -60,7 +60,7 @@ prev_btn.onclick = ()=>{
         que_numb--;
         showQuestions(que_count);
         queCounter(que_numb);
-        colourCounter(0);
+        colourCounter();
         timeText.textContent = "Time Left";
     }else{
         showResult();
@@ -75,10 +75,10 @@ next_btn.onclick = ()=>{
         que_numb++;
         showQuestions(que_count);
         queCounter(que_numb);
-        colourCounter(0);
+        colourCounter();
         timeText.textContent = "Time Left"; 
     }else{
-        showResult(0);
+        showResult();
     }
 }
 //Questions
@@ -170,5 +170,5 @@ function displayq(){
    quiz_box.classList.add("activeQuiz");
    showQuestions(0);
    queCounter(1);
-   colourCounter(0);
+   colourCounter();
 }
