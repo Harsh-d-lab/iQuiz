@@ -229,16 +229,6 @@ section .option_list .option .icon{
     transition: all 0.3s ease;
     line-height: 0.9rem;
 }
-.option_list .option .icon.tick{
-    color: #23903c;
-    border-color: #23903c;
-    background: #d4edda;
-}
-.option_list .option .icon.cross{
-    color: #a42834;
-    background: #f8d7da;
-    border-color: #a42834;
-}
 footer{
     height: 5rem;
     padding: 0rem 1rem;

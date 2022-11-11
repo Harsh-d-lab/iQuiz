@@ -20,10 +20,11 @@ function updateCountdown() {
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
 }
-
+//start_btn
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo");
 }
+//exit_btn
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo");
 }
@@ -43,13 +44,14 @@ restart_quiz.onclick = ()=>{
     userScore = 0;
     showQuetions(que_count);
     queCounter(que_numb);
-    clearInterval(counter);
-    startTimer(timeValue);
+    setInterval(updateCountdown, 1000);
     timeText.textContent = "Time Left";
 }
+//quit_quiz
 quit_quiz.onclick = ()=>{
     window.location.reload();
 }
+//prev_btn
 const prev_btn = document.querySelector("footer .prev_btn");
 const top_ques_counter = document.querySelector("footer .total_que");
 prev_btn.onclick = ()=>{
@@ -58,15 +60,13 @@ prev_btn.onclick = ()=>{
         que_numb--;
         showQuestions(que_count);
         queCounter(que_numb);
-        clearInterval(counter);
-        startTimer(timeValue);
         colourCounter(0);
         timeText.textContent = "Time Left";
     }else{
-        clearInterval(counter);
         showResult();
     }
 }
+//next_btn
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 next_btn.onclick = ()=>{
@@ -75,12 +75,9 @@ next_btn.onclick = ()=>{
         que_numb++;
         showQuestions(que_count);
         queCounter(que_numb);
-        clearInterval(counter);
-        startTimer(timeValue);
         colourCounter(0);
         timeText.textContent = "Time Left"; 
     }else{
-        clearInterval(counter);
         showResult(0);
     }
 }
@@ -124,7 +121,6 @@ function colourCounter() {
     document.getElementById("whites").innerHTML = 10 - answered - flagged - notanswered;
   }
 function optionSelected(answer){
-    clearInterval(counter);
     colourCounter();
     let userAns = answer.textContent;
     let correcAns = questions[que_count].answer;
@@ -142,6 +138,7 @@ function optionSelected(answer){
     next_btn.classList.add("show");
     prev_btn.classList.add("show");
 }
+//result_box
 function showResult(){
     info_box.classList.remove("activeInfo");
     quiz_box.classList.remove("activeQuiz");
