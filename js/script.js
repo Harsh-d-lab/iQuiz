@@ -14,7 +14,6 @@ start_btn.onclick = ()=>{
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo");
 }
-let timeValue =  10;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -25,8 +24,7 @@ restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz");
     que_palette.classList.add("activeQue")
     result_box.classList.remove("activeResult");
-    document.getElementById("a").style.display="block";
-    timeValue = 10; 
+    document.getElementById("a").style.display="block"; 
     que_count = 0;
     que_numb = 1;
     userScore = 0;
@@ -110,11 +108,8 @@ function colourCounter() {
     document.getElementById("greens").innerHTML = answered;
     document.getElementById("yellows").innerHTML = flagged;
     document.getElementById("reds").innerHTML = notanswered;
-    document.getElementById("whites").innerHTML =
-      10 - answered - flagged - notanswered;
+    document.getElementById("whites").innerHTML = 10 - answered - flagged - notanswered;
   }
-let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 function optionSelected(answer){
     clearInterval(counter);
     colourCounter();
@@ -123,13 +118,9 @@ function optionSelected(answer){
     const allOptions = option_list.children.length;
     if(userAns == correcAns){ 
         userScore += 1;
-        answer.classList.add("correct");
-        answer.insertAdjacentHTML("beforeend", tickIconTag);
         console.log("Correct Answer");
         console.log("Your correct answers = " + userScore);
     }else{
-        answer.classList.add("incorrect");
-        answer.insertAdjacentHTML("beforeend", crossIconTag);
         console.log("Wrong Answer");
     }
     for(i=0; i < allOptions; i++){

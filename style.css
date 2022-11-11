@@ -160,7 +160,7 @@ body{
 }
 .quiz_box header .timer{
     color: #004085;
-    background: #cce5ff;
+    background: #b8daff;
     border: 1rem solid #b8daff;
     height: 3rem;
     padding: 0rem 0.5rem;
@@ -173,19 +173,6 @@ body{
 .quiz_box header .timer .time_left_txt{
     font-weight: 400;
     font-size: 1.2rem;
-    user-select: none;
-}
-.quiz_box header .timer .timer_sec{
-    font-size: 2rem;
-    font-weight: 500;
-    height: 2rem;
-    width: 3rem;
-    color: #fff;
-    border-radius: 0.2rem;
-    line-height: 2rem;
-    text-align: center;
-    background: #343a40;
-    border: 0.1rem solid #343a40;
     user-select: none;
 }
 section{
