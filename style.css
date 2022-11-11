@@ -118,7 +118,7 @@ body{
     align-items: center;
     justify-content: flex-end;
     padding: 0rem 3rem;
-    border-top: 1px solid rgb(4, 118, 42);
+    border-top: 0.1rem solid rgb(4, 118, 42);
 }
 .info_box .buttons button{
     margin: 0rem 1rem;
@@ -226,7 +226,7 @@ section .option_list .option.correct{
 section .option_list .option.incorrect{
     color: #721c24;
     background: #f8d7da;
-    border: 1px solid #f5c6cb;
+    border: 0.1rem solid #f5c6cb;
 }
 section .option_list .option.disabled{
     pointer-events: none;
