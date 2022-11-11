@@ -7,7 +7,20 @@ const que_palette = document.querySelector(".que_palette");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 const timeText = document.querySelector(".timer .time_left_txt");
-const timeCount = document.querySelector(".timer .timer_sec");
+
+//timer
+const startingMinutes = 5;
+let time = startingMinutes * 60;
+const countdownEl = document.getElementById('countdown');
+setInterval(updateCountdown, 1000);
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    countdownEl.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+}
+
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo");
 }
@@ -149,34 +162,6 @@ function showResult(){
         scoreText.innerHTML = scoreTag;
     }
 }
-function startTimer(time){
-    counter = setInterval(timer, 700);
-    function timer(){
-        timeCount.textContent = time;
-        time--;
-        if(time < 9){
-            let addZero = timeCount.textContent; 
-            timeCount.textContent = "0" + addZero;
-        }
-        if(time < 0){
-            clearInterval(counter);
-            const allOptions = option_list.children.length;
-            let correcAns = questions[que_count].answer;
-            for(i=0; i < allOptions; i++){
-                if(option_list.children[i].textContent == correcAns){
-                    option_list.children[i].setAttribute("class", "option correct");
-                    option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
-                    console.log("Time Off: Auto selected correct answer.");
-                }
-            }
-            for(i=0; i < allOptions; i++){
-                option_list.children[i].classList.add("disabled");
-            }
-            prev_btn.classList.add("show");
-            next_btn.classList.add("show");
-        }
-    }
-}
 function queCounter(index){
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;
@@ -188,6 +173,5 @@ function displayq(){
    quiz_box.classList.add("activeQuiz");
    showQuestions(0);
    queCounter(1);
-   startTimer(10);
    colourCounter(0);
 }
