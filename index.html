@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="start_btn">
+        <button>Start Quiz</button></div>
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of the Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>10 seconds</span> per question.</div>
+            <div class="info">2. Once your answer is selected, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time runs out.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your <span>Correct Answers.</span></div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart" id="b">Continue</button>
+        </div>
+    </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">Quiz App</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">10</div>
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="prev_btn">Prev</button>
+            <button class="flag_btn">Flag</button>
+            <button class="clear_btn">Clear</button>
+            <button class="next_btn">Next</button>
+        </footer>
+    </div>
+    <div class="que_palette" id="a">
+        <div class="icon_info">
+            <div  class="white layer">
+                <div id="whites" class="white">2</div>
+                <span class="ctext">Not Visited</span>
+              </div>
+              <div class="red layer">
+                <div id="reds" class="red">3</div>
+                <span class="ctext">Not answered</span>
+              </div>
+            <div class="green layer">
+              <div id="greens" class="green">4</div>
+              <div class="ctext">Answered</div>
+            </div>
+            <div class="yellow layer">
+              <div id="yellows" class="yellow">5</div>
+              <span class="ctext">Flagged</span>
+            </div>
+          </div>
+          <hr />
+          <div class="question">
+            <p class="questions">Questions</p>
+            <div id="grid_cont" class="grid_container">
+              <div id="grid-item-1"  class="grid-item -hover ">1</div>
+              <div id="grid-item-2"  class="grid-item -hover ">2</div>
+              <div id="grid-item-3"  class="grid-item -hover ">3</div>
+              <div id="grid-item-4"  class="grid-item -hover ">4</div>
+              <div id="grid-item-5"  class="grid-item -hover ">5</div>
+              <div id="grid-item-6"  class="grid-item -hover ">6</div>
+              <div id="grid-item-7"  class="grid-item -hover ">7</div>
+              <div id="grid-item-8"  class="grid-item -hover ">8</div>
+              <div id="grid-item-9"  class="grid-item -hover ">9</div>
+              <div id="grid-item-10" class="grid-item -hover ">10</div>
+            </div>
+          </div>
+            <button onclick="confirmSubmit(1)" class="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
