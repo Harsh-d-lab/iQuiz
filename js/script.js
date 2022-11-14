@@ -26,7 +26,6 @@ start_btn.onclick = ()=>{
      prev_btn.classList.add("show");
      clear_btn.classList.add("show")     
      flag_btn.classList.add("show")     
-
 }
 //exit_btn
 exit_btn.onclick = ()=>{
@@ -36,8 +35,12 @@ exit_btn.onclick = ()=>{
 continue_btn.onclick = ()=>{
   info_box.classList.remove("activeInfo");
   quiz_box.classList.add("activeQuiz");
-  showQuetions(0);
-  queCounter(1);
+  next_btn.classList.add("show");
+     prev_btn.classList.add("show");
+     clear_btn.classList.add("show")     
+     flag_btn.classList.add("show")
+     showQuetions(0);
+     queCounter(1);
 }
 //submit_btn
 function confirmSubmit(yes){
@@ -68,6 +71,7 @@ restart_quiz.onclick = ()=>{
     queCounter(que_numb);
     colourCounter();
     setInterval(updateCountdown, 1000);
+    clearInterval(counter);
     timeText.textContent = "Time Left";
 }
 //quit_quiz

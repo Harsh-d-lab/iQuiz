@@ -8,10 +8,6 @@
 body{
     background: #02254a;
 }
-::selection{
-    color: #fff;
-    background: #0d3dbf;
-}
 .start_btn,
 .info_box,
 .result_box{
@@ -142,7 +138,7 @@ body{
 }
 .quiz_box{
     width: 65rem;
-    background: rgb(210, 157, 239);
+    background: rgb(196, 132, 231);
     border-radius: 0.5rem;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -154,7 +150,7 @@ body{
     z-index: 2;
     height: 5.5rem;
     padding: 0rem 3rem;
-    background: rgb(87, 155, 234);
+    background: rgb(230, 162, 246);
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     display: flex;
     align-items: center;
@@ -210,6 +206,7 @@ footer .total_que span p:first-child{
     padding-left: 0rem;
 }
 footer button{
+    margin-top: 3rem;
     height: 2.2rem;
     padding: 0rem 1.2rem;
     font-size: 1.2rem;
