@@ -17,6 +17,8 @@
       {
         "duplicate-id-aria": "off"
       }
-    ]
+    ],
+    "axe/forms": "off",
+    "no-inline-styles": "off"
   }
 }

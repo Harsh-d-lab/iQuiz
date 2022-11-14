@@ -14,9 +14,9 @@
         <div class="info-title"><span>Some Rules of the Quiz</span></div>
         <div class="info-list">
             <div class="info">1. You will have only <span>10 seconds</span> per question.</div>
-            <div class="info">2. Once your answer is selected, it can't be undone.</div>
-            <div class="info">3. You can't select any option once time runs out.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">2. You can <span>mark/flag</span> your answers.</div>
+            <div class="info">3. The Quiz is submitted when time runs out.</div>
+            <div class="info">4. You can <span>submit</span> the Quiz while you're playing.</div>
             <div class="info">5. You'll get points on the basis of your <span>Correct Answers.</span></div>
         </div>
         <div class="buttons">
@@ -34,36 +34,39 @@
                 </h3>
             </div>
         </header>
-        <section>
-            <div class="que_text">
-            </div>
-            <div class="option_list">
-            </div>
+        <section>         
+          <p class="que_text">1. What does HTML stand for?</p>
+          <div class="option_list">
+            <input type="radio" value="wrong">Hyper Text Preprocessor
+            <input type="radio" value="correct">Hyper Text Markup Language
+            <input type="radio" value="wrong">Hyper Text Multiple Language
+            <input type="radio" value="wrong">Hyper Tool Multi Language
+          </div>
         </section>
         <footer>
             <div class="total_que">
             </div>
             <button class="prev_btn">Prev</button>
             <button class="flag_btn">Flag</button>
-            <button class="clear_btn">Clear</button>
+            <button class="clear_btn" id="button_clear"onClick="clear_btn()">Clear</button>
             <button class="next_btn">Next</button>
         </footer>
     </div>
     <div class="que_palette" id="a">
         <div class="icon_info">
-            <div  class="white layer">
+            <div  class="white-layer">
                 <div id="whites" class="white">2</div>
                 <span class="ctext">Not Visited</span>
               </div>
-              <div class="red layer">
+              <div class="red-layer">
                 <div id="reds" class="red">3</div>
                 <span class="ctext">Not answered</span>
               </div>
-            <div class="green layer">
+            <div class="green-layer">
               <div id="greens" class="green">4</div>
               <div class="ctext">Answered</div>
             </div>
-            <div class="yellow layer">
+            <div class="yellow-layer">
               <div id="yellows" class="yellow">5</div>
               <span class="ctext">Flagged</span>
             </div>
